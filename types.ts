@@ -85,13 +85,6 @@ export interface ApplicationHistoryItem {
 }
 
 // Gemini Service related types
-<<<<<<< HEAD
-export interface GeminiAnalysisResult {
-  feedback: string;
-  suggestions?: string[];
-}
-
-=======
 
 // Structure for detailed breakdown of ATS parameters
 export interface AtsParameterScore {
@@ -110,7 +103,6 @@ export interface GeminiAnalysisResult {
 }
 
 
->>>>>>> adb81710b27097d4159147ba90f707936b9a6190
 export interface GroundingChunk {
   web?: {
     uri: string;

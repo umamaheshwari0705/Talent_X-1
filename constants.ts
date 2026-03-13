@@ -16,7 +16,7 @@ export const NAV_LINKS: NavLinkItem[] = [
 
 export const JOB_TYPES_OPTIONS = Object.values(JobType);
 
-export const MOCK_API_KEY = "YOUR_GEMINI_API_KEY"; // Placeholder, should be in .env
+export const MOCK_API_KEY = "AIzaSyCc81asI6ghbWn1Va_rs2n39Gs970baNfo"; // Placeholder, should be in .env
 
-export const GEMINI_TEXT_MODEL = 'gemini-2.5-flash-preview-04-17';
+export const GEMINI_TEXT_MODEL = 'gemini-2.5-flash';
 export const GEMINI_IMAGE_MODEL = 'imagen-3.0-generate-002';
