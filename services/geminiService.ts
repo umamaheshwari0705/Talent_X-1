@@ -41,7 +41,7 @@ export const analyzeResumeWithGemini = async (resumeText: string): Promise<Gemin
       contents: [{ role: "user", parts: [{ text: resumeText }] }],
       config: { systemInstruction, responseMimeType: "application/json", temperature: 0.5 }
     });
-    
+
     const text = result.text;
     if (!text) return { feedback: "No response from AI." };
     const raw = parseJsonFromText(text);
@@ -64,7 +64,7 @@ export const getPercentageMatchWithGemini = async (resumeText: string, jobDescri
       contents: [{ role: "user", parts: [{ text: prompt }] }],
       config: { systemInstruction, responseMimeType: "application/json", temperature: 0.3 }
     });
-    
+
     const text = result.text;
     if (!text) return { feedback: "No response from AI." };
     const raw = parseJsonFromText(text);
@@ -94,7 +94,7 @@ export const calculateAtsScoreWithGemini = async (resumeText: string): Promise<G
       contents: [{ role: "user", parts: [{ text: prompt }] }],
       config: { systemInstruction, responseMimeType: "application/json", temperature: 0.4 }
     });
-    
+
     const text = result.text;
     if (!text) return { feedback: "No response from AI.", overallScore: 0, detailedBreakdown: [], suggestions: [] };
     const raw = parseJsonFromText(text);
@@ -120,7 +120,7 @@ export const generateAiMockInterviewQuestions = async (jobRoleOrIndustry: string
       contents: [{ role: "user", parts: [{ text: prompt }] }],
       config: { systemInstruction, responseMimeType: "application/json", temperature: 0.6 }
     });
-    
+
     const text = result.text;
     if (!text) return { feedback: "No response from AI." };
     const raw = parseJsonFromText(text);
@@ -143,7 +143,7 @@ export const getResumeSuggestionsWithGemini = async (resumeText: string): Promis
       contents: [{ role: "user", parts: [{ text: prompt }] }],
       config: { systemInstruction, responseMimeType: "application/json", temperature: 0.5 }
     });
-    
+
     const text = result.text;
     if (!text) return { feedback: "No response from AI." };
     const raw = parseJsonFromText(text);
